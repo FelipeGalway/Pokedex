@@ -27,4 +27,4 @@ Para usar a aplicação, siga estes passos simples:
 
 ## Observação
 
-Certifique-se de que sua conexão com a Internet está ativa para que a aplicação possa buscar os dados da API corretamente. É importante também se atentar aos campos de busca e pesquisar a carta no campo correto.
+Certifique-se de que sua conexão com a Internet está ativa para que a aplicação possa buscar os dados da API corretamente.
