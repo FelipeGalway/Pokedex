@@ -22,18 +22,18 @@ jobs:
       uses: docker/setup-buildx-action@v3
     
     - name: Log in to DockerHub
-      uses: docker/login-action@v2
+      uses: docker/login-action@v3
       with:
         username: ${{ secrets.DOCKER_USERNAME }}
         password: ${{ secrets.DOCKER_PASSWORD }}
     
     - name: Build Docker image
       run: |
-        docker build -t felipegalway/pokedex:latest .
+        docker build -t legitimo/pokedex:latest .
     
     - name: Push Docker image
       run: |
-        docker push felipegalway/pokedex:latest
+        docker push legitimo/pokedex:latest
     
     - name: Deploy to remote server
       uses: appleboy/ssh-action@v0.1.5
@@ -47,4 +47,4 @@ jobs:
           docker stop pokedex || true
           docker rm pokedex || true
           # Rodar o novo container com a imagem mais recente
-          docker run -d --name pokedex -p 8089:80 felipegalway/pokedex:latest
+          docker run -d --name pokedex -p 8089:80 legitimo/pokedex:latest
