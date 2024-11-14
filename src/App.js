@@ -33,7 +33,7 @@ function App() {
 
     return (
         <div className="App">
-            <header>PokedexAAAAAAAAAA</header>
+            <header>Pokedex</header>
             <br />
             <form onSubmit={handleSearch}>
                 <input
@@ -43,7 +43,7 @@ function App() {
                     onChange={(e) => setPokemonName(e.target.value)}
                 />
                 <br />
-                <button type="submit">Search</button>
+                <button type="submit">Find</button>
             </form>
             {error && <p>{error}</p>}
             {pokemonData && (
