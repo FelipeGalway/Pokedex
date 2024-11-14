@@ -43,7 +43,7 @@ function App() {
                     onChange={(e) => setPokemonName(e.target.value)}
                 />
                 <br />
-                <button type="submit">Find</button>
+                <button type="submit">Search</button>
             </form>
             {error && <p>{error}</p>}
             {pokemonData && (
