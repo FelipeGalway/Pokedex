@@ -3,7 +3,7 @@ name: Build and Deploy Docker Container
 on:
   push:
     branches:
-      - master  # Ou a branch que você usa para produção
+      - main  # Ajuste conforme o nome da sua branch
 
 jobs:
   build:
@@ -29,10 +29,12 @@ jobs:
     - name: Build Docker image
       run: |
         docker build -t felipegalway/pokedex:latest .
+
     # Etapa 5: Subir a imagem para o DockerHub
     - name: Push Docker image
       run: |
         docker push felipegalway/pokedex:latest
+
     # Etapa 6: Conectar no servidor remoto e rodar o container
     - name: Deploy to remote server
       uses: appleboy/ssh-action@v0.1.6
