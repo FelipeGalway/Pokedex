@@ -44,6 +44,7 @@ jobs:
         port: 22
         script: |
           # Parar e remover o container existente
+          docker pull legitimo/pokedex:latest
           docker stop pokedex || true
           docker rm pokedex || true
           # Rodar o novo container com a imagem mais recente
