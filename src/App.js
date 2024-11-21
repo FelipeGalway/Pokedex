@@ -33,7 +33,7 @@ function App() {
 
     return (
         <div className="App">
-            <header>Pokedex</header>
+            <header>Felipe's Pokedex</header>
             <br />
             <form onSubmit={handleSearch}>
                 <input
